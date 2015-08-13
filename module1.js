@@ -20,6 +20,7 @@ class ImageUtils {
         ctx.putImageData(imageData, 0, 0);
     }
 
+
 }
 
 function getRandomInt(min, max) {
@@ -34,6 +35,13 @@ $(document).ready(function() {
     img.src = "img/cat.jpg";
 
 
+    });
 
+$(document).ready(function() {
+    var img = new Image();
+    img.src = "img/cat.jpg";
 
+    var pixels = ImageUtils.getPixels(img);
+    console.log(pixels);
+    ImageUtils.putPixels(pixels, img.width, img.height);
 });
